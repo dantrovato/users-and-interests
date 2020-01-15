@@ -1,0 +1,11 @@
+<h1><%= @name %></h1>
+<p><%= @email %></p>
+<p><%= @interests %></p>
+
+<ul>
+  <% @users.each do |user, details| %>
+    <% unless user == @name.to_sym %>
+      <li><a href="/users/<%= user %>"><%= user %></a></l1>
+    <% end %>
+  <% end %>
+</ul>
