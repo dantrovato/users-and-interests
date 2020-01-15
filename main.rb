@@ -1,11 +1,9 @@
 require 'sinatra'
-require 'sinatra/reloader'
+require 'sinatra/reloader' if development?
 require 'tilt/erubis'
-require 'pry'
 
 before do
   @users = YAML.load_file("users.yaml")
-
 end
 
 helpers do
